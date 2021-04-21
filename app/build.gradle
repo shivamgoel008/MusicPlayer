@@ -77,4 +77,10 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.0-beta01'
     implementation 'com.google.android.material:material:1.4.0-alpha02'
 
+
+//    implementation 'com.github.iammert:InteractivePlayerView:f4f6490290'
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+
 }
