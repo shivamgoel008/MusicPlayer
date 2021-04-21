@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/addFragment">
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="com.example.app.AddFragment"
+        android:label="fragment_add"
+        tools:layout="@layout/fragment_add" />
+    <fragment
+        android:id="@+id/onlineFragment"
+        android:name="com.example.app.OnlineFragment"
+        android:label="fragment_online"
+        tools:layout="@layout/fragment_online" >
+        <action
+            android:id="@+id/action_onlineFragment_to_addFragment"
+            app:destination="@id/addFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/likesFragment"
+        android:name="com.example.app.LikesFragment"
+        android:label="fragment_likes"
+        tools:layout="@layout/fragment_likes" >
+        <action
+            android:id="@+id/action_likesFragment_to_addFragment"
+            app:destination="@id/addFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/downloadFragment"
+        android:name="com.example.app.DownloadFragment"
+        android:label="fragment_download"
+        tools:layout="@layout/fragment_download" >
+        <action
+            android:id="@+id/action_downloadFragment_to_addFragment"
+            app:destination="@id/addFragment" />
+    </fragment>
+</navigation>
