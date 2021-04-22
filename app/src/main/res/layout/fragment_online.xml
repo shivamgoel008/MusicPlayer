@@ -178,10 +178,12 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
+
+
                         <ImageView
                             android:layout_width="80dp"
                             android:layout_height="50dp"
-                            android:src="@drawable/model_female" />
+                            android:background="@drawable/attension"/>
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -194,7 +196,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="5dp"
                                 android:lines="1"
-                                android:text="Same Old Love - Selena Gomez"
+                                android:text="Attention - Charlie Puth"
                                 android:textColor="#ddd"
                                 android:textSize="18sp"
                                 android:textStyle="bold" />
@@ -203,10 +205,18 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="7dp"
-                                android:text="Selena Gomez . 4:24"
+                                android:text="Charlie Puth . 4:24"
                                 android:textColor="#ddd"
                                 android:textSize="12sp" />
+
                         </LinearLayout>
+
+                        <ImageView
+                            android:layout_marginLeft="30dp"
+                            android:id="@+id/play_attention"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/ic_action_play" />
                     </LinearLayout>
 
                     <View
@@ -228,7 +238,7 @@
                         <ImageView
                             android:layout_width="80dp"
                             android:layout_height="50dp"
-                            android:src="@drawable/model_female" />
+                            android:src="@drawable/wp4606687" />
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -241,7 +251,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="5dp"
                                 android:lines="1"
-                                android:text="Same Old Love - Selena Gomez"
+                                android:text="Closer - Chainsmokers"
                                 android:textColor="#ddd"
                                 android:textSize="18sp"
                                 android:textStyle="bold" />
@@ -250,10 +260,17 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="7dp"
-                                android:text="Selena Gomez . 4:24"
+                                android:text="Chainsmokers . 4:20"
                                 android:textColor="#ddd"
                                 android:textSize="12sp" />
                         </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/play_closer"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="40dp"
+                            android:background="@drawable/ic_action_play" />
                     </LinearLayout>
 
                     <View

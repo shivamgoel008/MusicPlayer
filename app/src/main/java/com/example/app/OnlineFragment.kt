@@ -16,6 +16,7 @@ import kotlinx.android.synthetic.main.fragment_online.*
 class OnlineFragment : Fragment() {
 
     private lateinit var mediaPlayer: MediaPlayer
+    private lateinit var mediaPlayer2:MediaPlayer
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -58,24 +59,41 @@ class OnlineFragment : Fragment() {
 //            control.setImageDrawable(getResources().getDrawable(R.drawable.ic_baseline_motion_photos_paused_24))
         }
 
-    }
+        play_attention.setOnClickListener {
+            mediaPlayer.stop()
+            mediaPlayer=MediaPlayer.create(requireActivity(),R.raw.attention_charlie_puth)
+//            mediaPlayer2.setOnPreparedListener{
+//                println("READY TO GO")
+//            }
+            imageView.setBackgroundResource(R.drawable.attension)
+            interactivePlayerView.setBackgroundResource(R.drawable.attension)
+            if(mediaPlayer.isPlaying){
+                play_attention.setImageDrawable(getResources().getDrawable(R.drawable.ic_baseline_motion_photos_paused_24))
+                mediaPlayer.pause()
+            }
+            else{
 
-    fun handleTouch(event: MotionEvent?) {
-        when(event!!.action){
-            MotionEvent.ACTION_DOWN->{
-                println("down")
+                play_attention.setImageDrawable(getResources().getDrawable(R.drawable.ic_action_play))
                 mediaPlayer.start()
             }
-
-            MotionEvent.ACTION_CANCEL,MotionEvent.ACTION_UP->{
-                println("up or cancel")
-                mediaPlayer.pause()
-                mediaPlayer.seekTo(0)
-            }
-
-            else ->{
-                println("other")
-            }
         }
+
+        play_closer.setOnClickListener {
+            mediaPlayer.stop()
+            mediaPlayer=MediaPlayer.create(requireActivity(),R.raw.closer)
+
+            imageView.setBackgroundResource(R.drawable.chainsmokers)
+            interactivePlayerView.setBackgroundResource(R.drawable.wp4606687)
+
+            if(mediaPlayer.isPlaying){
+                mediaPlayer.pause()
+            }
+
+            else
+                mediaPlayer.start()
+        }
+
     }
+
+
 }
